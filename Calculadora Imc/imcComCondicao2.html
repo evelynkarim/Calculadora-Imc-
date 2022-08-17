@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<script>
+
+//função prompt: É uma função que recebe parâmetro e possui retorno.  (recebe uma informação e retorna para interação com o usuário).  
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(altura, peso) {
+
+        var imc = peso / (altura * altura);
+        return peso / (altura * altura); 
+    }
+
+    var nome = prompt("Qual o seu nome?: ");
+    var alturaInformada = prompt("Olá " + nome +  " , informe sua altura separando a casa decimal com ponto! Ex: 1.75: ");
+    var pesoInformado = prompt("Obrigada, agora informe o seu peso: ");
+    var imc = calculaImc(alturaInformada, pesoInformado);
+    
+    mostra(nome + ", o seu imc é: " + Math.round(imc));
+
+if(imc < 18.5){
+	mostra("Seu indice de massa corporal está abaixo da média recomendada!");
+}
+
+if(imc >=18.5 && imc <=34.9){
+	
+		mostra("Seu indice de massa corporal está dentro da média recomendada!");
+}	
+
+if(imc >35){
+
+	mostra("Alerta! Seu imc está acima da média recomendada!");
+}
+
+</script>
